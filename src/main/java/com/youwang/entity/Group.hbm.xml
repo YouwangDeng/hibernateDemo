@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.youwang.entity">
+    <class name="Group" table="group_table">
+        <id name="id" column="group_id">
+            <generator class="native"></generator>
+        </id>
+        <property name="groupname" column="group_name"></property>
+
+        <!-- 重点关注这里 -->
+        <!-- Set 为我们在 Group.java 中定义的集合 -->
+        <set name="users" >
+
+            <!-- 外键名称 -->
+            <key column="group_id" ></key>
+
+            <!-- 一对多关系对应的 class -->
+            <one-to-many class="com.youwang.entity.User" />
+        </set>
+
+    </class>
+</hibernate-mapping>

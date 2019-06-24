@@ -1,0 +1,6 @@
+com/youwang/entity/Group.class
+com/youwang/entity/User.class
+com/youwang/EJBPersistence/TestEJB.class
+com/youwang/EJBPersistence/Student.class
+com/youwang/test/CRUD.class
+com/youwang/test/GroupTest.class
